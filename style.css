@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+}
+:root {
+    --red-color: #ff0000;
+    --blue-color: #040f59;
+    --rose-color: #e2576e;
+    --green-color: #008000;
+    --liteblue-color: #3e479b;
+    --darkblue-color: #080263;
+    --litegreeen-color: #21fc51;
+    --darkgreen-color: #008000;
+    --white-color: #f0f8ff;
+    --light-color: #ffffff;
+    --liteblue1-color: #c7b9f8;
+    --liteblue2-color: #605ac1;
+    --lightgray-color: #444747;
+    --gray-color: #8a8a8a;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, var(--liteblue-color), var(--darkblue-color));
+    padding: .8rem 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    font-size: 1.3rem;
+    color: var(--white-color);
+    font-weight: bolder;
+}
+
+header .navbar a {
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0 1rem;
+}
+
+header .navbar a button {
+    padding: 10px;
+    color: var(--white-color);
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, var(--litegreeen-color), var(--darkgreen-color));
+
+}
+
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 1.5rem;
+    color: var(--white-color);
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid var(--gray-color);
+    display: none;
+}
+
+.container-fluid {
+    padding-top: 10%;
+    width: 100%;
+    padding-left: 5%;
+}
+
+.container {
+    border-radius: 10px;
+    width: 95%;
+    background: var(--light-color);
+    box-shadow: 0px 2px 20px var(--lightgray-color);
+}
+
+.content h4 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    color: var(--blue-color);
+}
+
+table {
+    padding-left: 3%;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    color: var(--gray-color);
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-color);
+}
+
+.content table i {
+    cursor: pointer;
+}
+
+.content table .fa-eye {
+    color: var(--green-color);
+    padding: 15px;
+}
+
+.content table .fa-pen-to-square {
+    color: var(--rose-color);
+    padding: 15px;
+}
+
+.content table .fa-download {
+    color: var(--red-color);
+    padding: 15px;
+}
+
+.content table .fa-trash {
+    color: var(--blue-color);
+    padding: 15px;
+}
+
+.content table button {
+    padding: 10PX;
+    background: linear-gradient(to left, var(--liteblue1-color), var(--liteblue2-color));
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+
+@media (max-width:768px) {
+
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to right, var(--liteblue-color), var(--darkblue-color));
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked~.navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        margin: 1rem;
+        padding: 1rem;
+        display: block;
+    }
+
+    header .navbar a button {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .container-fluid {
+        padding-top: 18%;
+        width: 100%;
+        padding-left: 5%;
+    }
+
+    th {
+        font-size: .7rem;
+    }
+
+    td {
+        font-size: .8rem;
+    }
+}
